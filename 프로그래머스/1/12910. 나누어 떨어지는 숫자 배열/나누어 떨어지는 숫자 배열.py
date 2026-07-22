@@ -1,0 +1,16 @@
+def solution(arr, divisor):
+    answer = []
+    
+    for i in range (len(arr)):
+        if arr[i] % divisor == 0:
+            answer.append(arr[i])
+        elif arr[i] % divisor == arr[i] / divisor:
+            answer.append(arr[i])
+            return
+            
+    if answer == []:
+        answer.append(-1)
+            
+    answer.sort()
+    
+    return answer
